@@ -4,3 +4,10 @@ if('serviceWorker' in navigator) {
   });
 
 }
+
+//before prompt install banner we will stop and show our banner to install
+window.addEventListener("beforeinstallprompt", function(event){
+  console.log("Before install prompt fired...!", event);
+  event.preventDefault();
+  
+});
