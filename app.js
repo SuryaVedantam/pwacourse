@@ -18,7 +18,9 @@ window.addEventListener("beforeinstallprompt", function(event){
 
 fetch("https://httpbin.org/ip").then(function(response){
   console.log(response);
-  console.log(response.json());
+ return response.json();
+})then(function(res){
+   console.log(res);
 });
 
 document.getElementById("myBtn").addEventListener("click", function(event){
