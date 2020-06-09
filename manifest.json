@@ -1,0 +1,28 @@
+{
+"name" : "PWA",
+ "short_name" : "Sample PWA Application",
+ "start_url" : "/pwacourse/index.html",
+ "scope" : ".",
+  "display" : "standalone",
+  "background_color" : "#FFF",
+  "theme_color" : "#000",
+  "description" : "All features of PWA",
+  "dir" : "ltr",
+  "lang" : "en-US",
+  "orientation" : "portrait-primary",
+  "icons" : [{
+     "src" : "/pwacourse/icons/icon_512.png",
+     "type" : "image/png",
+     "sizes" : "512x512"  
+  },
+  {
+     "src" : "/pwacourse/icons/icon_144.png",
+     "type" : "image/png",
+     "sizes" : "144x144"  
+  },
+  {
+     "src" : "/pwacourse/icons/icon_48.png",
+     "type" : "image/png",
+     "sizes" : "48x48"  
+  }]
+}
