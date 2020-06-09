@@ -15,6 +15,12 @@ window.addEventListener("beforeinstallprompt", function(event){
   return false;
 });
 
+
+fetch("https://httpbin.org/ip").then(function(response){
+  console.log(response);
+  console.log(response.json());
+});
+
 document.getElementById("myBtn").addEventListener("click", function(event){
   if(deferredPrompt) {
     deferredPrompt.prompt();
