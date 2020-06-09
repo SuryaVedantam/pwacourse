@@ -7,3 +7,7 @@ self.addEventListener('activate',function(event){
   console.log("[ServiceWorker] Activating service worker...", event);
   return self.clients.claim();
 });
+
+self.addEventListener('fetch',function(event){
+  console.log("[ServiceWorker] Fetching something...", event);
+});
