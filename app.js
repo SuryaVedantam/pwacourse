@@ -16,7 +16,7 @@ window.addEventListener("beforeinstallprompt", function(event){
 });
 
 
-fetch("https://httpbin.org/ip").then(function(response){
+fetch("https://suryaphani1729.github.io/myresources/cart.json").then(function(response){
   console.log(response);
  return response.json();
 }).then(function(res){
