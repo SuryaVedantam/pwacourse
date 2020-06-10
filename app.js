@@ -23,7 +23,7 @@ fetch("https://suryaphani1729.github.io/myresources/cart.json").then(function(re
    console.log(res);
 });
 
-document.getElementById("myBtn").addEventListener("click", function(event){
+document.getElementById("cacheBtn").addEventListener("click", function(event){
  console.log("clicked");
 });
 
