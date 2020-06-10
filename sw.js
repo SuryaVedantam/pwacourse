@@ -28,6 +28,8 @@ self.addEventListener('fetch',function(event){
           return caches.open('dynamic').then(function(cache){
             cache.put(event.request.url,res.clone());
             return res;
+          }).catch(function(err){
+           console.log("Error", err);
           })
        });
     }));
