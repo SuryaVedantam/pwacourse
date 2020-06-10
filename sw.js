@@ -2,7 +2,7 @@
 self.addEventListener('install',function(event){
   console.log("[ServiceWorker] Installing service worker...", event);
   event.waitUntil(
-  caches.open('static').then(function(cache){
+  caches.open('static-v2').then(function(cache){
        console.log("[ServiceWorker] Pre caching...", cache);
     cache.addAll(['/pwacourse/',
                   '/pwacourse/app.css',
@@ -16,6 +16,18 @@ self.addEventListener('install',function(event){
 
 self.addEventListener('activate',function(event){
   console.log("[ServiceWorker] Activating service worker...", event);
+   event.waitUntil(
+     caches.keys().then(function(keyList){
+       return Promise.all(keyList.map(function(key){
+          if(key !== 'static-v2' && key !== 'dynamic') {
+             console.log("[ServiceWorker] Removing cache...", key);
+            caches.delete(key);
+          }
+       }))
+     })
+     );
+  
+  
   return self.clients.claim();
 });
 
