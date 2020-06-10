@@ -23,6 +23,11 @@ fetch("https://suryaphani1729.github.io/myresources/cart.json").then(function(re
    console.log(res);
 });
 
+function cacheBtn(event){
+ console.log("clicked");
+}
+
+
 document.getElementById("myBtn").addEventListener("click", function(event){
   if(deferredPrompt) {
     deferredPrompt.prompt();
