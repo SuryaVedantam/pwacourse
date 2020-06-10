@@ -5,7 +5,7 @@ self.addEventListener('install',function(event){
   caches.open('static').then(function(cache){
        console.log("[ServiceWorker] Pre caching...", cache);
       cache.add('/pwacourse/app.js');
-  });
+  })
   );
   
 });
