@@ -20,7 +20,12 @@ fetch("https://suryaphani1729.github.io/myresources/cart.json").then(function(re
   console.log(response);
  return response.json();
 }).then(function(res){
-   console.log(res);
+   var data = "<ul>";
+   for(var i=0;i<res.data.length;i++) {
+     data += "<li>"+res.data[i].title+"</li>";
+   };
+  data += "</ul>";
+  document.getElementById("data").innerHTML = data;
 });
 
 document.getElementById("cacheBtn").addEventListener("click", function(event){
