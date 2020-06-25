@@ -17,7 +17,9 @@ window.addEventListener("beforeinstallprompt", function(event){
 
 
 fetch("https://suryaphani1729.github.io/myresources/cart.json").then(function(response){
-  console.log(response);
+  
+console.log("response from url",response);
+
  return response.json();
 }).then(function(res){
    var data = "<ul>";
