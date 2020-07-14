@@ -1,8 +1,8 @@
 name: Tests
 
 on:
-  pull_request:
-    branches: [ master ]
+  push:
+    branches: [ MyBranch1 ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,4 +19,5 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
+        npm install,
         echo test, and deploy your project.
